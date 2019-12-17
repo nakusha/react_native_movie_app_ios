@@ -9,3 +9,10 @@ styled-components
 axios 
 @expo/vector-icon 
 react-navigation
+
+
+## Screens
+- [ ] Movies
+- [ ] TV Shows
+- [ ] Search
+- [ ] Detail
