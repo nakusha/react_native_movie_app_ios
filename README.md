@@ -11,9 +11,10 @@ axios
 react-navigation
 >>https://reactnavigation.org
 >>using tabbar, naviation library
->react-navigation-tabs
+>react-navigation-tabs (for TabBottomNavigator)
 >react-native-gesture-handler
 >react-native-reanimated
+>react-natigation-stack (for stack navigator)
 
 
 ## Screens
