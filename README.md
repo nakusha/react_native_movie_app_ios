@@ -9,6 +9,11 @@ styled-components
 axios 
 @expo/vector-icon 
 react-navigation
+>>https://reactnavigation.org
+>>using tabbar, naviation library
+>react-navigation-tabs
+>react-native-gesture-handler
+>react-native-reanimated
 
 
 ## Screens
