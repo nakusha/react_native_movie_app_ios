@@ -19,8 +19,15 @@ react-navigation
 >react-native-reanimated
 >react-natigation-stack (for stack navigator)
 
+## Component
+- [X] Loader
+- [X] Bottom Tab Bar
 
 ## Screens
+>>Container
+>>>Get Data
+>>Presenter
+>>>Show Data
 - [ ] Movies
 - [ ] TV Shows
 - [ ] Search

@@ -2,7 +2,7 @@ import React from "react";
 import { Platform } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs"
-import MovieScreen from '../screens/Movie';
+import MovieScreen from '../screens/Movies';
 import TVScreen from '../screens/TV';
 import SearchScreen from '../screens/Search';
 import { BG_COLOR, TINT_COLOR } from "../constants/Colors";
