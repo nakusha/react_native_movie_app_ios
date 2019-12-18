@@ -17,7 +17,6 @@ export default class extends React.Component {
             const popular = await movies.getPopular();
             const nowPlaying = await movies.getNowPlaying();
         }catch(error) {
-            console.log(error)
             this.setState({error:"Can't get Movies"});
         }finally{
             this.setState({loading:false});
