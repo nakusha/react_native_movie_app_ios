@@ -5,17 +5,17 @@ iOS / Android MovieDiscovery App built with React Native
 - prop-types 
 - styled-components 
 - axios
->for network(req, rep)
->>movie db
->themoviedb.org
+ - for network(req, rep)
+ - movie db
+  - themoviedb.org
 - @expo/vector-icon 
 - react-navigation
->https://reactnavigation.org
->using tabbar, naviation library
->react-navigation-tabs (for TabBottomNavigator)
->react-native-gesture-handler
->react-native-reanimated
->react-natigation-stack (for stack navigator)
+ - https://reactnavigation.org
+ - using tabbar, naviation library
+ - react-navigation-tabs (for TabBottomNavigator)
+ - react-native-gesture-handler
+ - react-native-reanimated
+ - react-natigation-stack (for stack navigator)
 
 ## Component
 - [X] Loader
@@ -23,9 +23,9 @@ iOS / Android MovieDiscovery App built with React Native
 
 ## Screens
 - Container
->Get Data
+ - Get Data
 - Presenter
->Show Data
+ - Show Data
 - [ ] Movies
 - [ ] TV Shows
 - [ ] Search
