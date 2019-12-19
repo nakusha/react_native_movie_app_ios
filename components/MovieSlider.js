@@ -5,7 +5,7 @@ import Swiper from "react-native-swiper";
 import Layout from "../constants/Layout";
 import MovieSlide from "./MovieSlide";
 
-const SWIPER_HEIGHT = Layout.height / 3
+const SWIPER_HEIGHT = Layout.height / 3.5
 const View = styled.View`
     height: ${SWIPER_HEIGHT};
 `;
