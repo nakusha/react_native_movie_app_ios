@@ -20,6 +20,8 @@ iOS / Android MovieDiscovery App built with React Native
 ## Component
 - [X] Loader
 - [X] Bottom Tab Bar
+- [X] Stack Tab Bar
+- [X] Movie Component
 
 ## Screens
 - Container
