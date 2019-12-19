@@ -42,3 +42,7 @@ react-navigation
  - [X] TV Show Detail
  - [X] Movie Detail
  - [X] Search(TV, Movie)
+
+ # react native swiper
+ >https://github.com/leecade/react-native-swiper
+ >yarn add react-native-swiper
