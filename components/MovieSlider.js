@@ -19,7 +19,7 @@ const MovieSlider = ({movies}) => (
         autoplayTimeout={3}
     >
         {movies
-            .filter(movie => movie.backdrop_path !== null)
+            .filter(movie => ((movie.backdrop_path !== null) && (movie.overview.length !== 0)))
             .map(movie => (
                 <View key={movie.id}>
                     <MovieSlide 
