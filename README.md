@@ -1,19 +1,17 @@
 # Nomad Movies
 
 iOS / Android MovieDiscovery App built with React Native
-
-
-yarn add 
-prop-types 
-styled-components 
-axios
+- yarn add 
+- prop-types 
+- styled-components 
+- axios
 >for network(req, rep)
 >>movie db
->>>themoviedb.org
-@expo/vector-icon 
-react-navigation
->>https://reactnavigation.org
->>using tabbar, naviation library
+>themoviedb.org
+- @expo/vector-icon 
+- react-navigation
+>https://reactnavigation.org
+>using tabbar, naviation library
 >react-navigation-tabs (for TabBottomNavigator)
 >react-native-gesture-handler
 >react-native-reanimated
@@ -24,10 +22,10 @@ react-navigation
 - [X] Bottom Tab Bar
 
 ## Screens
->>Container
->>>Get Data
->>Presenter
->>>Show Data
+- Container
+>Get Data
+- Presenter
+>Show Data
 - [ ] Movies
 - [ ] TV Shows
 - [ ] Search
@@ -44,5 +42,5 @@ react-navigation
  - [X] Search(TV, Movie)
 
  # react native swiper
- >https://github.com/leecade/react-native-swiper
- >yarn add react-native-swiper
+ - https://github.com/leecade/react-native-swiper
+ - yarn add react-native-swiper
