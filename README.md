@@ -33,6 +33,17 @@ iOS / Android MovieDiscovery App built with React Native
 - [ ] Search
 - [ ] Detail
 
+### Screen Detail
+- MoviesContainer
+  - 
+- MoviesPresenter
+- MovieSlider
+- MovieSlide
+- MovieRating
+- MoviePoster
+- ShowDetailButton
+- Section
+
 ## API Verbs
  - [X] Now playing (Movie)
  - [X] Upcoming (MOVIE)
