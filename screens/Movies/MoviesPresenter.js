@@ -6,9 +6,10 @@ import styled from "styled-components";
 import MovieSlider from "../../components/MovieSlider";
 import Section from "../../components/Section";
 import SectionItem from "../../components/SectionItem";
+import { BG_COLOR, TINT_COLOR } from "../../constants/Colors";
 
 const Container = styled.ScrollView`
-    background-Color: black;
+    background-Color: ${BG_COLOR};
 `;
 
 const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) => 
@@ -25,6 +26,18 @@ const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) =>
                     posterPhoto={movie.poster_path}
                     title={movie.title}
                     voteAvrg={movie.vote_average}/>)}
+                </Section>
+            ) : null}
+            {popular ? (
+                <Section horizontal={false} title="Popular Moviews">
+                {popular
+                .filter(movie => movie.poster_path !== null)
+                .map(movie => <SectionItem id={movie.id}
+                    posterPhoto={movie.poster_path}
+                    title={movie.title}
+                    voteAvrg={movie.vote_average}
+                    overview={movie.overview}
+                    horizontal={true}/>)}
                 </Section>
             ) : null}
         </Container>
