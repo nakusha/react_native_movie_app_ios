@@ -33,6 +33,7 @@ iOS / Android MovieDiscovery App built with React Native
 - [X] Search
   - TextInput : https://facebook.github.io/react-native/docs/textinput.html
 - [ ] Detail
+  - TouchableWithoutFeedback (Touch WithOut Any React)
 
 ### Screen Detail
 - MoviesContainer

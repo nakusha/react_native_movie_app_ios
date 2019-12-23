@@ -25,23 +25,9 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) => loadi
                         posterPhoto={tv.poster_path}
                         title={tv.name}
                         voteAvrg={tv.vote_average}
+                        isMovie={false}
                     />
                 ))}
-            </Section>
-        ) : null}
-        {popular ? (
-            <Section title="Popular">
-                {popular.filter(tv => tv.poster_path !== null)
-                .map(tv => (
-                    <SectionItem
-                        key={tv.id}
-                        id={tv.id}
-                        posterPhoto={tv.poster_path}
-                        title={tv.name}
-                        voteAvrg={tv.vote_average}
-                    />
-                ))}
-                
             </Section>
         ) : null}
         {airingThisWeek ? (
@@ -54,11 +40,31 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) => loadi
                         posterPhoto={tv.poster_path}
                         title={tv.name}
                         voteAvrg={tv.vote_average}
+                        isMovie={false}
                     />
                 ))}
                 
             </Section>
         ) : null}
+        {popular ? (
+            <Section horizontal={false} title="Popular">
+                {popular.filter(tv => tv.poster_path !== null)
+                .map(tv => (
+                    <SectionItem
+                        horizontal={true}
+                        key={tv.id}
+                        id={tv.id}
+                        posterPhoto={tv.poster_path}
+                        title={tv.name}
+                        voteAvrg={tv.vote_average}
+                        overview={tv.overview}
+                        isMovie={false}
+                    />
+                ))}
+                
+            </Section>
+        ) : null}
+        
     </Container>
 );
 

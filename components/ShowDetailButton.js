@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TINT_COLOR } from "../constants/Colors";
+import { withNavigation } from "react-navigation";
 
 const BtnContainer = styled.TouchableOpacity`
     background-color: #e74c3c;
@@ -13,14 +14,15 @@ const BtnText = styled.Text`
     color: ${props => props.textColor ? textColor : TINT_COLOR};
 `;
 
-const ShowDetailBtn = ({ text}) => (
-    <BtnContainer>
+const ShowDetailBtn = ({ id, text, navigation }) => (
+    <BtnContainer onPress={() => navigation.navigate({routeName:"Detail", params: {isMovie:true, id}})}>
         <BtnText>{text}</BtnText>
     </BtnContainer>
 );
 
 ShowDetailBtn.propTypes = {
-    text:PropTypes.string.isRequired
+    text:PropTypes.string.isRequired,
+    id:PropTypes.number.isRequired
 }
 
-export default ShowDetailBtn;
+export default withNavigation(ShowDetailBtn);

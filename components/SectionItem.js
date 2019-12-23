@@ -4,6 +4,8 @@ import styled from "styled-components";
 import MoviePoster from "./MoviePoster";
 import MovieRating from "./MovieRating";
 import { TINT_COLOR, GREY_COLOR } from "../constants/Colors";
+import { TouchableWithoutFeedback } from "react-native";
+import { withNavigation } from "react-navigation"
 
 const Container = styled.View`
     align-items:center;
@@ -32,29 +34,40 @@ const OverView = styled.Text`
     margin-vertical:10px;
 `;
 
-const SectionItem = ({id, posterPhoto, title, voteAvrg, horizontal = false, overview}) => (
-    horizontal ? (
-    <HContainer>
-        <MoviePoster path={posterPhoto}/>
-        <Column>
-            <Title big={true}>{title}</Title>
+const SectionItem = ({
+    id, 
+    posterPhoto, 
+    title, 
+    voteAvrg, 
+    horizontal = false, 
+    overview, 
+    isMovie = true, 
+    navigation
+}) => (
+    <TouchableWithoutFeedback onPress={() => navigation.navigate({ routeName: "Detail", params:{ isMovie, id }})}>{
+        horizontal ? (
+        <HContainer>
+            <MoviePoster path={posterPhoto}/>
+            <Column>
+                <Title big={true}>{title}</Title>
+                <MovieRating votes={voteAvrg}/>
+                {overview ? (
+                    <OverView>
+                        {overview.length > 170 
+                            ? `${overview.substring(0, 167)}...` 
+                            : overview }
+                    </OverView>)
+                : null}
+            </Column>
+        </HContainer>
+        ) : (
+        <Container>
+            <MoviePoster path={posterPhoto}/>
+            <Title>{title.length > 14 ? `${title.substring(0, 11)}...` : title}</Title>
             <MovieRating votes={voteAvrg}/>
-            {overview ? (
-                <OverView>
-                    {overview.length > 170 
-                        ? `${overview.substring(0, 167)}...` 
-                        : overview }
-                </OverView>)
-            : null}
-        </Column>
-    </HContainer>
-    ) : (
-    <Container>
-        <MoviePoster path={posterPhoto}/>
-        <Title>{title.length > 14 ? `${title.substring(0, 11)}...` : title}</Title>
-        <MovieRating votes={voteAvrg}/>
-    </Container>
-    )
+        </Container>
+        )
+    }</TouchableWithoutFeedback>
 );
 
 SectionItem.propTypes = {
@@ -62,7 +75,8 @@ SectionItem.propTypes = {
     posterPhoto: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     voteAvrg: PropTypes.number.isRequired,
-    overview: PropTypes.string
+    overview: PropTypes.string,
+    isMovie: PropTypes.bool
 }
 
-export default SectionItem;
+export default withNavigation(SectionItem);

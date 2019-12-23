@@ -50,7 +50,14 @@ const VoteContainer = styled.View`
     margin: 10px 0px;
 `;
 
-const MovieSlide = ({id, posterPhoto, backgroundPhoto, title ,voteAvrg, overView}) => (
+const MovieSlide = ({
+    id, 
+    posterPhoto, 
+    backgroundPhoto, 
+    title,
+    voteAvrg, 
+    overView,
+}) => (
     <Container>
         <BgImage source={{uri: makePhotoUrl(backgroundPhoto)}}/>
         <Content>
@@ -69,7 +76,7 @@ const MovieSlide = ({id, posterPhoto, backgroundPhoto, title ,voteAvrg, overView
                             : overView }
                     </Overview>)
                      : null}
-                <ShowDetailBtn text={"More Detail"}/>
+                <ShowDetailBtn text={"View Detail"} id={id}/>
             </Column>
         </Content>
     </Container>
@@ -84,4 +91,4 @@ MovieSlide.propTypes = {
     overView: PropTypes.string.isRequired
 }
 
-export default MovieSlide
+export default MovieSlide;

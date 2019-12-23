@@ -77,6 +77,7 @@ const SearchPresenter = ({ loading, tvResults, movieResults, searchTerm, handleS
                                         posterPhoto={tv.poster_path}
                                         title={tv.name}
                                         voteAvrg={tv.vote_average}
+                                        isMovie={false}
                                     />
                                 ))}
                             </Section>
