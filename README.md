@@ -28,9 +28,10 @@ iOS / Android MovieDiscovery App built with React Native
   - Get Data
 - Presenter
   - Show Data
-- [ ] Movies
-- [ ] TV Shows
-- [ ] Search
+- [X] Movies
+- [X] TV Shows
+- [X] Search
+  - TextInput : https://facebook.github.io/react-native/docs/textinput.html
 - [ ] Detail
 
 ### Screen Detail

@@ -19,6 +19,7 @@ export const tv = {
     }),
     searchTV: term => api.get("search/tv", {
         params: {
+            language: "ko-KR",
             query: encodeURIComponent(term)
         }
     })
@@ -36,7 +37,9 @@ export const movies = {
     }),
     searchMovies: term => api.get("search/movie", {
         params: {
+            language: "ko-KR",
             query: encodeURIComponent(term)
+            
         }
     })
 }
