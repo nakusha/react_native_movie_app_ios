@@ -25,7 +25,7 @@ iOS / Android MovieDiscovery App built with React Native
 
 ## Screens
 - Container
-  - Get Data
+  - Get Data And Send To Presenter
 - Presenter
   - Show Data
 - [X] Movies
