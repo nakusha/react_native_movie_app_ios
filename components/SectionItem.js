@@ -28,7 +28,7 @@ const Column = styled.View`
     width:60%;
 `;
 
-const OverView = styled.Text`
+const Overview = styled.Text`
     color:${GREY_COLOR};
     font-size:12px;
     margin-vertical:10px;
@@ -36,7 +36,7 @@ const OverView = styled.Text`
 
 const SectionItem = ({
     id, 
-    posterPhoto, 
+    posterPhoto,
     title, 
     voteAvrg, 
     horizontal = false, 
@@ -44,7 +44,18 @@ const SectionItem = ({
     isMovie = true, 
     navigation
 }) => (
-    <TouchableWithoutFeedback onPress={() => navigation.navigate({ routeName: "Detail", params:{ isMovie, id }})}>{
+    <TouchableWithoutFeedback onPress={() => navigation.navigate({ 
+        routeName: "Detail", 
+        params:{ 
+            isMovie, 
+            id,
+            backgroundPhoto:null,
+            posterPhoto,
+            title,
+            voteAvrg,
+            overview
+        }
+    })}>{
         horizontal ? (
         <HContainer>
             <MoviePoster path={posterPhoto}/>
@@ -52,11 +63,11 @@ const SectionItem = ({
                 <Title big={true}>{title}</Title>
                 <MovieRating votes={voteAvrg}/>
                 {overview ? (
-                    <OverView>
+                    <Overview>
                         {overview.length > 170 
                             ? `${overview.substring(0, 167)}...` 
                             : overview }
-                    </OverView>)
+                    </Overview>)
                 : null}
             </Column>
         </HContainer>

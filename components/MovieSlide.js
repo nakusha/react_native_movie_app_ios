@@ -56,7 +56,7 @@ const MovieSlide = ({
     backgroundPhoto, 
     title,
     voteAvrg, 
-    overView,
+    overview
 }) => (
     <Container>
         <BgImage source={{uri: makePhotoUrl(backgroundPhoto)}}/>
@@ -69,14 +69,22 @@ const MovieSlide = ({
                         <MovieRating votes={voteAvrg} inSlider={true}/>
                     </VoteContainer>)
                  : null }
-                {overView ? (
+                {overview ? (
                     <Overview>
-                        {overView.length > 117 
-                            ? `${overView.substring(0, 120)}...` 
-                            : overView }
+                        {overview.length > 117 
+                            ? `${overview.substring(0, 120)}...` 
+                            : overview }
                     </Overview>)
                      : null}
-                <ShowDetailBtn text={"View Detail"} id={id}/>
+                <ShowDetailBtn 
+                    text={"View Detail"} 
+                    id={id} 
+                    posterPhoto={posterPhoto} 
+                    backgroundPhoto={backgroundPhoto} 
+                    title={title} 
+                    voteAvrg={voteAvrg} 
+                    overview={overview}
+                />
             </Column>
         </Content>
     </Container>
@@ -88,7 +96,7 @@ MovieSlide.propTypes = {
     backgroundPhoto: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     voteAvrg: PropTypes.number.isRequired,
-    overView: PropTypes.string.isRequired
+    overview: PropTypes.string.isRequired
 }
 
 export default MovieSlide;

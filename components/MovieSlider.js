@@ -23,7 +23,7 @@ const MovieSlider = ({movies}) => (
             .map(movie => (
                 <View key={movie.id}>
                     <MovieSlide 
-                        overView={movie.overview} 
+                        overview={movie.overview} 
                         voteAvrg={movie.vote_average} 
                         title={movie.title}
                         id={movie.id}

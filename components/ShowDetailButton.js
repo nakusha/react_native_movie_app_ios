@@ -14,8 +14,28 @@ const BtnText = styled.Text`
     color: ${props => props.textColor ? textColor : TINT_COLOR};
 `;
 
-const ShowDetailBtn = ({ id, text, navigation }) => (
-    <BtnContainer onPress={() => navigation.navigate({routeName:"Detail", params: {isMovie:true, id}})}>
+const ShowDetailBtn = ({ 
+    id, 
+    text, 
+    navigation, 
+    posterPhoto,
+    backgroundPhoto,
+    title,
+    voteAvrg,
+    overview,
+}) => (
+    <BtnContainer onPress={() => navigation.navigate({
+        routeName:"Detail", 
+        params: {
+            isMovie:true, 
+            id, 
+            posterPhoto, 
+            backgroundPhoto, 
+            title, 
+            voteAvrg, 
+            overview
+        }
+    })}>
         <BtnText>{text}</BtnText>
     </BtnContainer>
 );

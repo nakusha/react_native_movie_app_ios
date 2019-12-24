@@ -9,7 +9,9 @@ const Vote = styled.Text`
     font-weight: 600;
 `;
 
-const MovieRating = ({ votes, inSlider = false }) => <Vote>평점 : {`${votes} / 10`}</Vote>
+const MovieRating = ({ votes, inSlider = false }) => (
+    <Vote inSlider={inSlider}>평점 : {`${votes} / 10`}</Vote>
+);
 
 MovieRating.propTypes = {
     votes: PropTypes.number.isRequired,
